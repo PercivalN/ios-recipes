@@ -1,10 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tUd-tH-l7W">
+            <objects>
+                <viewController id="egU-6O-EQE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b4S-TT-yp3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0s-c0-HcA">
+                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                                <connections>
+                                    <segue destination="thR-61-dTU" kind="embed" id="AsR-W7-CYy"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n0Z-ii-OCH">
+                                <rect key="frame" x="53.5" y="40" width="268" height="76"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-Ir-S9a" userLabel="Sort Stack View">
+                                        <rect key="frame" x="13" y="0.0" width="242.5" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVw-SK-ZaT">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="px8-Ei-kJO">
+                                                <rect key="frame" x="81.5" y="0.0" width="161" height="29"/>
+                                                <segments>
+                                                    <segment title="First Name"/>
+                                                    <segment title="Last Name"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sqj-tE-gB3">
+                                        <rect key="frame" x="0.0" y="48" width="268" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Um-MQ-EO0">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0s6-5v-4tw">
+                                                <rect key="frame" x="77" y="0.0" width="191" height="29"/>
+                                                <segments>
+                                                    <segment title="None"/>
+                                                    <segment title="iOS"/>
+                                                    <segment title="Web"/>
+                                                    <segment title="UX"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AoN-1Y-dLp" firstAttribute="trailing" secondItem="y0s-c0-HcA" secondAttribute="trailing" id="Efn-dA-Yod"/>
+                            <constraint firstItem="y0s-c0-HcA" firstAttribute="top" secondItem="n0Z-ii-OCH" secondAttribute="bottom" constant="8" id="GUE-l8-4ZF"/>
+                            <constraint firstItem="AoN-1Y-dLp" firstAttribute="bottom" secondItem="y0s-c0-HcA" secondAttribute="bottom" id="Hjs-8F-fLH"/>
+                            <constraint firstItem="y0s-c0-HcA" firstAttribute="leading" secondItem="AoN-1Y-dLp" secondAttribute="leading" id="Jf9-io-Jfi"/>
+                            <constraint firstItem="n0Z-ii-OCH" firstAttribute="top" secondItem="AoN-1Y-dLp" secondAttribute="top" constant="20" id="ScB-R9-6mc"/>
+                            <constraint firstItem="n0Z-ii-OCH" firstAttribute="centerX" secondItem="b4S-TT-yp3" secondAttribute="centerX" id="eNE-aQ-1Nj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AoN-1Y-dLp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xx2-AN-Khc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="89"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="4kz-YR-D4i">
+            <objects>
+                <tableViewController id="thR-61-dTU" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uoo-Wb-EtW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CZR-0H-BLA">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CZR-0H-BLA" id="gJG-4j-VCt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="thR-61-dTU" id="7fX-cC-HwC"/>
+                            <outlet property="delegate" destination="thR-61-dTU" id="98q-Fg-qWK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGQ-PX-jt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="144"/>
+        </scene>
+    </scenes>
 </document>

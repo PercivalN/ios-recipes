@@ -83,12 +83,36 @@
 		9DA0F07B2117E3F800A99E97 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				DD0E152C231C70590082D908 /* View Controlllers */,
+				DD0E152B231C70520082D908 /* Models */,
+				DD0E152A231C70490082D908 /* New Group */,
 				9DA0F07C2117E3F800A99E97 /* AppDelegate.swift */,
 				9D59AF412117E637002FB7CD /* Networking */,
 				9D59B52A2117F520002FB7CD /* Model */,
 				9D59AF452117E652002FB7CD /* Resources */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		DD0E152A231C70490082D908 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		DD0E152B231C70520082D908 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD0E152C231C70590082D908 /* View Controlllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controlllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
